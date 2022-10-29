@@ -1,43 +1,37 @@
-import { useState, useEffect } from "react"
-import { getProduct } from "../asyncMock/asyncMock"
-import { useParams } from "react-router-dom"
+import './ItemDetailContainer.css'
+import { useState, useEffect } from 'react'
+import { getProductById } from '../asyncMock/asyncMock'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
 
 
 
-const ItemDetailContainer = () => {
 
-    const [product, setProduct] = useState ([])
-    const [loading, setLoading ] = useState (true)
-    
-    const { productId } = useParams ()
+const ItemDetailContainer = ({ setCart }) => {
+    const [product, setProduct] = useState()
+    const [loading, setLoading] = useState(true)
 
+    const { productId } = useParams()
 
-    useEffect (() =>{
-        getProduct(productId).then(product => {
-            setProduct(product)
+    useEffect(() => {
+        getProductById(productId).then(response => {
+            setProduct(response)
         }).finally(() => {
-            setLoading (false)
+            setLoading(false)
         })
-    }, [] )
+    }, [productId])
 
-    if (loading){
-        return <h1>Loading product..</h1>
+    if(loading) {
+        return <h1>Cargando...</h1>
     }
 
-
-    return (
-        <div>
-            <h1>Detalle del producto </h1>
-            <div>
-                <h1>{product.name}</h1>
-                <h2>{product.category}</h2>
-                <h3>{product.price}</h3>
-            </div>
+    return(
+        <div className='ItemDetailContainer' >
+            <ItemDetail  {...product} setCart={setCart}/>
         </div>
     )
 }
 
-
-
 export default ItemDetailContainer
+
 
