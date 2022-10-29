@@ -1,12 +1,12 @@
 const products = [
 
     {id:'1',
-     name:'Remera Miami Dolphins',
+     name:'Remera de juego Miami Dolphins',
      price:50,
-     category:'Gorras',
+     category:'Juego',
      img:'',
      stock: 20,
-     description: 'Remera Miami Dolphins'
+     description: 'Remera de juego Miami Dolphins'
      },
      {id:'2',
      name:'Gorra Miami Dolphins',
@@ -33,12 +33,12 @@ const products = [
      description: 'Casco Patriots de Juego'
      },
      {id:'5',
-     name:'Remera Tampa Bay Buccaneers',
+     name:'Remera de juego  Tampa Bay Buccaneers',
      price:50,
-     category:'Remeras',
+     category:'Juego',
      img:'',
      stock: 50,
-     description: 'Remera Tampa Bay Buccaneers'
+     description: 'Remera de juego  Tampa Bay Buccaneers'
      },
      {id:'6',
      name:'San Francisco 49ers',
@@ -49,12 +49,12 @@ const products = [
      description: 'San Francisco 49ers'
      },
      {id:'7',
-     name:'Seattle Seahawks',
+     name:'Remera de juego Seattle Seahawks',
      price:50,
-     category:'Remeras',
+     category:'Juego',
      img:'',
      stock: 200,
-     description: 'Seattle Seahawks'
+     description: 'Remera de juego Seattle Seahawks'
      },
      {id:'8',
      name:'Gorra Kansas City Chiefs',
